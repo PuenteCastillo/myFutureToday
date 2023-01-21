@@ -12,10 +12,18 @@ export default function Home() {
           <h2>Top skill</h2>
 
           <div className="google_search_container">
-            <Image src={googleImg} />
-            <div className="search-box"> How to google ...</div>
-            <Image src={mic} />
-            <Image src={search} />
+            <div className="aline-box">
+              <Image src={googleImg} />
+            </div>
+
+            <div className="aline-box search-box "> How to google ...</div>
+
+            <div className="aline-box">
+              <Image src={mic} />
+            </div>
+            <div className="aline-box">
+              <Image src={search} />
+            </div>
           </div>
           <h3>Other Skills / Honorable mentions...</h3>
           <div className="row limmitWidth">
@@ -72,6 +80,8 @@ export default function Home() {
                   <li> Adobe XD</li>
 
                   <li>Adobe Lightroom</li>
+
+                  <li>r u actually read this? </li>
 
                   <li>Adobe Illustrator</li>
                 </ul>

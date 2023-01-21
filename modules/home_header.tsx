@@ -31,7 +31,7 @@ export default function Home() {
               <Image className="featuredImg" src={featuredImg} />
             </div>
           </div>
-          <div className="socials">
+          <div className="socials tab-socials">
             <i class="fab fa-instagram"></i> <i class="fab fa-linkedin-in"></i>{" "}
             <i class="fab fa-github"></i>
             <i class="far fa-envelope"></i>

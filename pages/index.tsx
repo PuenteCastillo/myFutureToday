@@ -1,18 +1,34 @@
 import Home_header from "modules/home_header.tsx";
 import Intro from "modules/intro.tsx";
+import Banner_carousel from "modules/banner_carousel";
 import Head from "next/head";
+
 import $ from "jquery";
 
 export default function Home() {
   if (typeof window !== "undefined") {
     // browser code
     $(".main_page").on("scroll", function () {
-      console.log($(".main_page").scrollTop());
       if ($(".main_page").scrollTop() > 1000) {
         $(".main_body").addClass("make_white");
       } else {
         $(".main_body").removeClass("make_white");
       }
+    });
+
+    // scroll main body even if the mouse is on the main page
+    $(".main_body").on("wheel", function (e) {
+      e.preventDefault();
+
+      // if (e.originalEvent.deltaY < 0) {
+      //   e.originalEvent.deltaY = 0;
+      // }
+
+      // console.log(e.originalEvent.deltaY);
+
+      $(".main_page").scrollTop(
+        $(".main_page").scrollTop() + e.originalEvent.deltaY
+      );
     });
   }
   return (
@@ -45,13 +61,39 @@ export default function Home() {
           crossorigin="anonymous"
         ></script>
 
-        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"
+        ></script>
+
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+          integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+          integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
       </Head>
       <div id="particles-js" className="main_body">
         <div className="main_page">
           <Home_header />
           <Intro />
+          <Banner_carousel />
+        </div>
+        <div className="socials desktop-social">
+          <div className="center-div">
+            <i class="fab fa-instagram"></i> <i class="fab fa-linkedin-in"></i>{" "}
+            <i class="fab fa-github"></i>
+            <i class="far fa-envelope"></i>
+          </div>
         </div>
       </div>
     </>

@@ -17,7 +17,6 @@
     width: 100%;
     object-fit: contain;
   }
-
   h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
@@ -50,6 +49,9 @@
     text-decoration: none;
   }
 }
+// .main_body {
+//   background-color: red !important;
+// }
 
 .intro {
   padding-top: 100px;
@@ -92,23 +94,38 @@
     width: 500px;
     height: 60px;
     background-color: white;
+    padding-left: 0px;
+    // padding-bottom: 30px;
+    padding-top: 10px;
     padding-left: 20px;
-    padding-bottom: 30px;
     margin: auto;
     margin-bottom: 50px;
     img {
-      display: inline-table;
-      width: 35px;
+      // display: inline-table;
+      // transform: scale(0.5);
+      height: 40px;
+      width: 50px;
       object-fit: contain;
-      margin-top: -15px;
+      // margin-top: -15px;
+      // background-color: blue;
       // remove whites using blend mode
       mix-blend-mode: multiply;
+      // background-color: blue;
+    }
+    .aline-box {
+      display: inline-block;
+      vertical-align: middle;
+      // margin-top: -20px;
+      // background-color: red;
     }
     .search-box {
-      display: inline-table;
+      margin-top: 0px;
+      // display: inline-table;
 
       margin-left: 10px;
-      width: 72%;
+      width: 65%;
+      // background-color: red;
+      // height: 50px;
     }
   }
   .limmitWidth {
@@ -158,5 +175,36 @@
   margin-top: -150px;
   i {
     margin-right: 15px;
+  }
+}
+.tab-socials {
+  // if viewport width is smaller than 1600px or hight is smaller than 900px
+  @media (min-width: 1600px) {
+    display: none;
+  }
+  // @media (min-height: 900px) {
+  //   display: none;
+  // }
+}
+
+.desktop-social {
+  position: absolute;
+  // background-color: red;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  .center-div {
+    margin: auto;
+    // background-color: blue;
+    margin-bottom: 25px;
+    width: fit-content;
+  }
+  // hide if viewport is smaller than 1600px
+  @media (max-width: 1600px) {
+    display: none;
+  }
+  // if viewport hight is smaller than 900px
+  @media (max-height: 900px) {
+    display: none;
   }
 }
