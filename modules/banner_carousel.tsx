@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import Image from "next/image";
+import Callaway from "./banners/callaway";
 // import banner_placeholder from "../public/image/banner_placeholder.png";
 
 export default function banner_carousel() {
@@ -13,13 +14,13 @@ export default function banner_carousel() {
 
   return (
     <>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/EaselPlugin.min.js"></script>
+      <Callaway />
+
       <Slider {...settings}>
-        <div>
-          <h3>{/* <Image src={banner_placeholder} /> */}</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
+        <div> </div>
+        <div>{/* <Callaway /> */}</div>
         <div>
           <h3>3</h3>
         </div>

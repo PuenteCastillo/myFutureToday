@@ -2,6 +2,7 @@ import Home_header from "modules/home_header.tsx";
 import Intro from "modules/intro.tsx";
 import Banner_carousel from "modules/banner_carousel";
 import Head from "next/head";
+import Callaway from "../modules/banners/callaway";
 
 import $ from "jquery";
 
@@ -27,7 +28,7 @@ export default function Home() {
       // console.log(e.originalEvent.deltaY);
 
       $(".main_page").scrollTop(
-        $(".main_page").scrollTop() + e.originalEvent.deltaY
+        $(".main_page").scrollTop() + e.originalEvent.deltaY / 5
       );
     });
   }
@@ -84,9 +85,10 @@ export default function Home() {
       </Head>
       <div id="particles-js" className="main_body">
         <div className="main_page">
-          <Home_header />
-          <Intro />
+          {/* <Home_header />
+          <Intro /> */}
           <Banner_carousel />
+          {/* <Callaway /> */}
         </div>
         <div className="socials desktop-social">
           <div className="center-div">

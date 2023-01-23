@@ -208,3 +208,12 @@
     display: none;
   }
 }
+
+.box {
+  background-color: black;
+  width: 300px;
+  height: 600px;
+  img {
+    position: absolute;
+  }
+}
